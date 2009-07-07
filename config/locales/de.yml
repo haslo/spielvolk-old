@@ -31,7 +31,8 @@ de:
     wrong_password: "Falscher Benutzername oder ungültiges Passwort."
 
   special:
-    footer: "Job-DB von <a href='http://www.promino.ch/'>Promino AG</a>."
+    footer: "Spielvolk von <a href='http://haslo.ch/'>haslo.ch</a>."
+    title: "Spielvolk.ch, die Schweizer Brettspiele-Community"
 
 # German translations for Ruby on Rails 
 # by Clemens Kofler (clemens@railway.at)

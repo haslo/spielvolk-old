@@ -31,4 +31,5 @@ en:
     wrong_password: "Wrong username or password."
 
   special:
-    footer: "Job-DB by <a href='http://www.promino.ch/'>Promino AG</a>."
+    footer: "Spielvolk by <a href='http://haslo.ch/'>haslo.ch</a>."
+    title: "Spielvolk.ch, the Swiss Boardgame Community"

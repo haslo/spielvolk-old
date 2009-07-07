@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Promino Job-DB: <%= controller.controller_name %> > <%= controller.action_name %></title>
+    <title><%= I18n.t 'special.title' %> <%= controller.controller_name %> > <%= controller.action_name %></title>
     <%= stylesheet_link_tag(session[:user] && User.find_by_id(session[:user]).style ? User.find_by_id(session[:user]).style : "default") %>
   </head>
   <body>
