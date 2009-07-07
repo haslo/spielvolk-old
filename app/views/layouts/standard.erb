@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Promino Job-DB: <%= controller.controller_name %> > <%= controller.action_name %></title>
+    <%= stylesheet_link_tag(session[:user] && User.find_by_id(session[:user]).style ? User.find_by_id(session[:user]).style : "default") %>
+  </head>
+  <body>
+    <div id='main'>
+      <div id='header'>
+        <h1></h1>
+        <div id='profile'>
+          <%= session[:user] ?
+            I18n.t('titles.welcome_named', :full_name => User.find_by_id(session[:user]).first_name + " " + User.find_by_id(session[:user]).name) :
+            I18n.t('titles.welcome_anonymous') %>
+        </div>
+      </div>
+      <% if flash[:notice] %>
+        <div class='error'>
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+      <div id='content'>
+        <%= yield %>
+      </div>
+      <div id='menu'>
+        <ul>
+          <li><%= link_to I18n.t('buttons.home'), :controller => "home", :action => "index" %></li>
+          <% if session[:user] %>
+            <li><%= link_to I18n.t('buttons.profile'), :controller => "profile", :action => "view" %></li>
+            <li><%= link_to I18n.t('buttons.logout'), :controller => "admin", :action => "logout" %></li>
+          <% else %>
+            <li><%= link_to I18n.t('buttons.login'), :controller => "admin", :action => "login" %></li>
+            <li><%= link_to I18n.t('buttons.signup'), :controller => "admin", :action => "signup" %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div id='footer'>
+        <%= I18n.t 'special.footer' %>
+      </div>
+    </div>
+  </body>
+</html>
