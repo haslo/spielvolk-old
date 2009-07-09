@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :games
+
+  map.resources :events
+
   map.root :controller => "home", :action => "index"
 
   map.connect ':controller/:action'
