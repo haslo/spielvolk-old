@@ -119,3 +119,56 @@ ActionController::RoutingError (No route matches "/stylesheets/default.css" with
   F:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (30.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (50.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddUserTable (20090706151722)
+Migrating to AddRolesAndRightsTables (20090706155457)
+Migrating to AddNameAndStyleToUser (20090706163238)
+Migrating to AddEmailToUser (20090707122034)
+Migrating to CreateEvents (20090709214254)
+  [4;35;1mSQL (60.0ms)[0m   [0mCREATE TABLE `events` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `title` varchar(255), `description` text, `place_id` int(11), `start_date` date, `start_time` time, `end_time` time, `repetition_description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (20.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090709214254')[0m
+Migrating to CreateGames (20090709214317)
+  [4;35;1mSQL (50.0ms)[0m   [0mCREATE TABLE `games` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `bgg_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (20.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090709214317')[0m
+Migrating to CreateEventInstances (20090709214400)
+  [4;35;1mSQL (60.0ms)[0m   [0mCREATE TABLE `event_instances` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `event_id` int(11), `date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (30.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090709214400')[0m
+Migrating to AddEventGamesLinks (20090709214540)
+  [4;35;1mSQL (50.0ms)[0m   [0mCREATE TABLE `events_games` (`events_id` int(11), `games_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (50.0ms)[0m   [0;1mCREATE TABLE `event_instances_games` (`event_instances_id` int(11), `games_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090709214540')[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (10.0ms)[0m   [0mSHOW FIELDS FROM `event_instances`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mdescribe `event_instances`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `event_instances`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `event_instances_games`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `event_instances_games`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `event_instances_games`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mdescribe `events`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `events`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `events_games`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `events_games`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSHOW KEYS FROM `events_games`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `games`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `games`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `games`[0m
+  [4;36;1mSQL (23.0ms)[0m   [0;1mSHOW FIELDS FROM `rights`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `rights`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `rights`[0m
+  [4;35;1mSQL (12.0ms)[0m   [0mSHOW FIELDS FROM `rights_roles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `rights_roles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `rights_roles`[0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (10.0ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
