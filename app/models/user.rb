@@ -2,6 +2,8 @@ require "digest/sha2"
 
 class User < ActiveRecord::Base
   has_and_belongs_to_many :roles
+  has_many :events
+
   validates_uniqueness_of :username
 
   def password=(pass)
