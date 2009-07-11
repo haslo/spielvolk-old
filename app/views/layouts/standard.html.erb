@@ -29,7 +29,6 @@
         <ul>
           <li><%= link_to I18n.t('buttons.home'), :controller => "home", :action => "index" %></li>
           <% if session[:user] %>
-            <li><%= link_to I18n.t('buttons.profile'), :controller => "profile", :action => "view" %></li>
             <li><%= link_to I18n.t('buttons.logout'), :controller => "admin", :action => "logout" %></li>
           <% else %>
             <li><%= link_to I18n.t('buttons.login'), :controller => "admin", :action => "login" %></li>
