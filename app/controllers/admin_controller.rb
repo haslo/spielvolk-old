@@ -37,6 +37,7 @@ class AdminController < ApplicationController
   end
 
   def signup
+      @user = User.new
   end
 
   def signups
