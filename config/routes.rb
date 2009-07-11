@@ -3,7 +3,11 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :events
 
-  map.root :controller => "home", :action => "index"
+  if RAILS_ENV == 'production' then
+    map.root :controller => "under_development", :action => "index"
+  else
+    map.root :controller => "home", :action => "index"
+  end
 
   map.connect ':controller/:action'
   map.connect ':controller/:action/:id'
