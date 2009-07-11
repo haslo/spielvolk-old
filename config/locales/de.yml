@@ -181,7 +181,7 @@ de:
         header:
           one:    "Konnte dieses {{model}} Objekt nicht speichern: 1 Fehler."
           other:  "Konnte dieses {{model}} Objekt nicht speichern: {{count}} Fehler."
-        body: "Bitte überprüfen Sie die folgenden Felder:"
+        body: "Bitte überprüfe die folgenden Felder:"
 
       messages:
         inclusion: "ist kein gültiger Wert"
