@@ -16,6 +16,7 @@ set :deploy_via, :remote_cache
 
 namespace :deploy do
   desc "Create the database yaml file"
+
   # Restart passenger on deploy
   desc "Restarting mod_rails with restart.txt"
   task :restart, :roles => :app, :except => { :no_release => true } do

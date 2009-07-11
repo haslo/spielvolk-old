@@ -37,10 +37,6 @@ class AdminController < ApplicationController
   end
 
   def signup
-      @user = User.new
-  end
-
-  def signups
     if request.post?
       @user = User.new(params[:user])
       if @user.save

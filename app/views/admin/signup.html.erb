@@ -1,0 +1,25 @@
+<h2><%= I18n.t 'titles.signup' %></h2>
+<%= I18n.t 'paragraphs.signup' %>
+<% form_for(:user, @user, :url => { :action => 'signup'}) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label I18n.t 'labels.username' %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label I18n.t 'labels.email' %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label I18n.t 'labels.password' %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label I18n.t 'labels.password_confirmation' %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.submit I18n.t('buttons.signup') %>
+  </p>
+<% end %>
