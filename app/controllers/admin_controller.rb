@@ -1,6 +1,5 @@
 class AdminController < ApplicationController
   before_filter :check_not_logged_in, :only => [:login, :signup]
-  skip_before_filter :check_authentication, :check_authorization, :only => [:login, :logout, :signup]
 
   def check_not_logged_in
     if session[:user]
@@ -19,7 +18,8 @@ class AdminController < ApplicationController
         redirect_to :controller => "admin", :action => "login"
         return
       end
-      if session[:intended_action] && session[:intended_controller]
+      flash[:notice] = I18n.t 'notices.logged_in'
+      if (session[:intended_action] && session[:intended_controller])
         redirect_to :controller => session[:intended_controller],
                     :action => session[:intended_action]
         session[:intended_controller] = session[:intended_action] = nil
@@ -31,20 +31,21 @@ class AdminController < ApplicationController
 
   def logout
     session[:user] = nil
+    flash[:notice] = I18n.t 'notices.logged_out'
     redirect_to :controller => "home", :action => "index"
   end
 
   def signup
     if request.post?
-      signup_user = User.new
-      signup_user.username = params[:username]
-      signup_user.password = params[:password]
-      signup_user.first_name = params[:first_name]
-      signup_user.name = params[:name]
-      signup_user.email = params[:email]
-      signup_user.save
-      session[:user] = signup_user.id
-      redirect_to :controller => "home", :action => "index"
+      @user = User.new(params[:user])
+      @user.roles << Role.find_by_name("profile_owner")
+      if @user.save
+        session[:user] = @user.id
+        redirect_to :controller => "home", :action => "index"
+        return
+      end
+    else
+      @user = User.new
     end
   end
 end
