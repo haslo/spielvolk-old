@@ -6,8 +6,7 @@ class ApplicationController < ActionController::Base
 
   layout 'standard'
   before_filter :check_authentication,
-                :check_authorization,
-                :except => [:login, :logout, :signup]
+                :check_authorization
   
   before_filter :set_locale
 
