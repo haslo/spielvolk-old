@@ -1,8 +1,15 @@
+<h2><%= I18n.t 'titles.login' %></h2>
 <%= I18n.t 'paragraphs.login' %>
-<% form_tag :action => "login" do %>
-  <label for="username_or_email"><%= I18n.t 'labels.username_or_email' %>:</label>
-  <%= text_field_tag "username_or_email" %><br />
-  <label for="password"><%= I18n.t 'labels.password' %>:</label>
-  <%= password_field_tag "password" %><br />
-  <%= submit_tag I18n.t('buttons.login') %>
+<% form_tag(:action => "login") do |f| %>
+  <p>
+    <%= label_tag I18n.t 'labels.username_or_email' %><br />
+    <%= text_field_tag "username_or_email" %>
+  </p>
+  <p>
+    <%= label_tag I18n.t('labels.password') + ':' %><br />
+    <%= password_field_tag "password" %>
+  </p>
+  <p>
+    <%= submit_tag I18n.t('buttons.login') %>
+  </p>
 <% end %>

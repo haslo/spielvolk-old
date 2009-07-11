@@ -1,16 +1,25 @@
+<h2><%= I18n.t 'titles.signup' %></h2>
 <%= I18n.t 'paragraphs.signup' %>
-<% form_tag :action => "signup" do %>
-  <label for="username"><%= I18n.t 'labels.username' %>:</label>
-  <%= text_field_tag "username" %><br />
-  <label for="email"><%= I18n.t 'labels.email' %>:</label>
-  <%= text_field_tag "email" %><br />
-  <label for="first_name"><%= I18n.t 'labels.first_name' %>:</label>
-  <%= text_field_tag "first_name" %><br />
-  <label for="name"><%= I18n.t 'labels.name' %>:</label>
-  <%= text_field_tag "name" %><br />
-  <label for="password"><%= I18n.t 'labels.password' %>:</label>
-  <%= password_field_tag "password" %><br />
-  <label for="password_confirmation"><%= I18n.t 'labels.password_confirmation' %>:</label>
-  <%= password_field_tag "password_confirmation" %><br />
-  <%= submit_tag I18n.t('buttons.signup') %>
+<% form_for(:user, @user, :url => { :action => 'signup'}) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label I18n.t 'labels.username' %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label I18n.t 'labels.email' %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label I18n.t 'labels.password' %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label I18n.t 'labels.password_confirmation' %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.submit I18n.t('buttons.signup') %>
+  </p>
 <% end %>
