@@ -43,34 +43,27 @@ de:
 
   paragraphs:
     welcome: Hurra, wir haben eine Heimseite.
-    signup: Bitte geben Sie Ihre Nutzerdaten ein.
-    login: Bitte melden Sie sich an.
+    signup: Bitte gib Deine Nutzerdaten ein.
+    login: Bitte melde Dich an.
 
   errors:
-    not_authorized: Sie nicht dazu authorisiert, die angeforderte Seite zu betrachten.
+    not_authorized: Du bist nicht dazu authorisiert, die angeforderte Seite zu betrachten.
     already_logged_in: Bereits angemeldet.
-    not_logged_in: Die angeforderte Seite kann erst nach Ihrer Anmeldung angezeigt werden.
+    not_logged_in: Die angeforderte Seite kann erst nach Deiner Anmeldung angezeigt werden.
     wrong_password: Falscher Benutzername oder ungültiges Passwort.
     incorrect_domain: Domainname scheint nicht zu stimmen.
-    no_profile: Diesem Account ist kein eigenes Profil zugeordnet.
     cannot_be_changed: kann nicht geändert werden.
-    user_not_found: Benutzer nicht gefunden. Bitte melden Sie sich erneut an.
-
-  values:
-    mr: Herr
-    mrs: Frau
-    ms: Frau
-    no_telling: Keine Angabe
+    user_not_found: Benutzer nicht gefunden. Bitte melde Dich erneut an.
 
   notices:
     logged_out: Erfolgreich abgemeldet.
     logged_in: Erfolgreich angemeldet.
 
   popups:
-    confirm_logout: Wollen Sie sich wirklich abmelden?
+    confirm_logout: Willst Du Dich wirklich abmelden?
 
   special:
-    footer: Job-DB von <a href='http://www.promino.ch/'>Promino AG</a>.
+    footer: spielvolk von <a href='http://haslo.ch/'>haslo.ch</a>.
 
 # German translations for Ruby on Rails 
 # by Clemens Kofler (clemens@railway.at)
