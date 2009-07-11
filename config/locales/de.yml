@@ -63,6 +63,7 @@ de:
     confirm_logout: Willst Du Dich wirklich abmelden?
 
   special:
+    title: spielvolk
     footer: spielvolk von <a href='http://haslo.ch/'>haslo.ch</a>.
 
 # German translations for Ruby on Rails 
