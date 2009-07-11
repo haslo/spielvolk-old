@@ -48,4 +48,3 @@ EOF
  end
 
 end
-database.yml
