@@ -1,38 +1,76 @@
 de:
   titles:
-    welcome_anonymous: "Willkommen!"
-    welcome_named: "Willkommen, {{full_name}}!"
+    welcome: Willkommen
+    login: Anmelden
+    signup: Account erstellen
+    profile_overview: Profil-Übersicht
+    edit_profile: Profil editieren
+
+  status:
+    logged_in_as: Eingeloggt als<br />{{login_link}}.
+    not_logged_in: Nicht eingeloggt.
 
   labels:
-    username: "Benutzername"
-    username_or_email: "Benutzername oder E-Mail"
-    password: "Passwort"
-    password_confirmation: "Passwortbestätigung"
-    email: "E-Mail"
-    first_name: "Vorname"
-    name: "Name"
+    username: Benutzername
+    username_or_email: Benutzername oder E-Mail
+    password: Passwort
+    password_confirmation: Passwortbestätigung
+    email: E-Mail
+    first_name: Vorname
+    name: Name
+    birthdate: Geburtstag
+    salutation: Anrede
+    street: Strasse
+    street_nbr: Hausnummer
+    city: Ort
+    zip: Postleitzahl
 
   buttons:
-    login: "Anmelden"
-    logout: "Abmelden"
-    signup: "Account erstellen"
-    home: "Heimseite"
-    profile: "Profil"
+    login: Anmelden
+    logout: Abmelden
+    signup: Account erstellen
+    edit_profile: Profil editieren
+    save_and_next: Speichern und weiter
+    save: Speichern
+    step_nbr: Schritt {{step}}
+
+  menu:
+    home: Heimseite
+    profile: Profil
+    login: Anmelden
+    logout: Abmelden
+    signup: Account erstellen
 
   paragraphs:
-    welcome: "Hurra, wir haben eine Heimseite."
-    signup: "Bitte geben Sie Ihre Nutzerdaten ein."
-    login: "Bitte melden Sie sich an."
+    welcome: Hurra, wir haben eine Heimseite.
+    signup: Bitte geben Sie Ihre Nutzerdaten ein.
+    login: Bitte melden Sie sich an.
 
   errors:
-    not_authorized: "Sie nicht dazu authorisiert, die angeforderte Seite zu betrachten."
-    already_logged_in: "Bereits angemeldet."
-    not_logged_in: "Die angeforderte Seite kann erst nach Ihrer Anmeldung angezeigt werden."
-    wrong_password: "Falscher Benutzername oder ungültiges Passwort."
+    not_authorized: Sie nicht dazu authorisiert, die angeforderte Seite zu betrachten.
+    already_logged_in: Bereits angemeldet.
+    not_logged_in: Die angeforderte Seite kann erst nach Ihrer Anmeldung angezeigt werden.
+    wrong_password: Falscher Benutzername oder ungültiges Passwort.
+    incorrect_domain: Domainname scheint nicht zu stimmen.
+    no_profile: Diesem Account ist kein eigenes Profil zugeordnet.
+    cannot_be_changed: kann nicht geändert werden.
+    user_not_found: Benutzer nicht gefunden. Bitte melden Sie sich erneut an.
+
+  values:
+    mr: Herr
+    mrs: Frau
+    ms: Frau
+    no_telling: Keine Angabe
+
+  notices:
+    logged_out: Erfolgreich abgemeldet.
+    logged_in: Erfolgreich angemeldet.
+
+  popups:
+    confirm_logout: Wollen Sie sich wirklich abmelden?
 
   special:
-    footer: "Spielvolk von <a href='http://haslo.ch/'>haslo.ch</a>."
-    title: "Spielvolk.ch, die Schweizer Brettspiele-Community"
+    footer: Job-DB von <a href='http://www.promino.ch/'>Promino AG</a>.
 
 # German translations for Ruby on Rails 
 # by Clemens Kofler (clemens@railway.at)

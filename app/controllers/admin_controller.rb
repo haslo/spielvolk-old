@@ -1,5 +1,6 @@
 class AdminController < ApplicationController
   before_filter :check_not_logged_in, :only => [:login, :signup]
+  skip_before_filter :check_authentication, :check_authorization, :only => [:login, :logout, :signup]
 
   def check_not_logged_in
     if session[:user]
