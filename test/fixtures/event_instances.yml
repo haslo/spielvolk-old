@@ -1,9 +1,0 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  event_id: 1
-  date: 2009-07-09
-
-two:
-  event_id: 1
-  date: 2009-07-09

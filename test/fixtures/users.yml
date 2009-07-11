@@ -1,7 +1,14 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+admin:
+  username: admin
+  password_salt: QDzZzGT9
+  password_hash: 3194e67c1a3410673d7e2a5d4d8ce937336a17f6787d301845d8a9b373354751
+  style: default
+  email: haslo@haslo.ch
+  roles: admin
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+user:
+  username: user
+  password_salt: oHyZyU99
+  password_hash: beacdfd6963aa54b9f013f56c709319d4fe5e4c66d747bc208913c929082e5e8
+  style: default
+  email: haslo@haslo.ch

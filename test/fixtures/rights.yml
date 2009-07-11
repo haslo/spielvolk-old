@@ -1,7 +1,9 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+games_admin:
+  name: Games Admin
+  controller: games
+  actions: *
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+events_admin:
+  name: Events Admin
+  controller: events
+  actions: *

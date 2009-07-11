@@ -39,7 +39,6 @@ class AdminController < ApplicationController
   def signup
     if request.post?
       @user = User.new(params[:user])
-      @user.roles << Role.find_by_name("profile_owner")
       if @user.save
         session[:user] = @user.id
         redirect_to :controller => "home", :action => "index"
