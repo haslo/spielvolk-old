@@ -10,7 +10,7 @@ set :use_sudo, false
 set :keep_releases, 4
 
 set :scm, :git
-set :branch, "master"
+set :branch, "adding_calendar"
 set :repository, "git@github.com:haslo/spielvolk.git"
 set :deploy_via, :remote_cache
 
