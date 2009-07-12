@@ -5,8 +5,8 @@ de:
     signup: Account erstellen
     profile_overview: Profil-Übersicht
     edit_profile: Profil editieren
-    event_repeating: Ereignis-Instanz
-    event: Ereignis
+    event_repeating: Ereignis-Instanz {{title}}
+    event: Ereignis {{title}}
     upcoming_events: Nächste Ereignisse
 
   status:

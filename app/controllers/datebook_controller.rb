@@ -10,12 +10,13 @@ class DatebookController < ApplicationController
     @all_event_instances = fetch_all_event_instances
     @event_instance = EventInstance.find_by_id(params[:id])
     if @event_instance.event.event_instances.size == 1
-      redirect_to :action => "show_event"
+      redirect_to :action => "show_event", :id => @event_instance.event.id
     end
   end
 
   def show_event
     @all_event_instances = fetch_all_event_instances
+    @event = Event.find_by_id(params[:id])
   end
 
 private
