@@ -5,7 +5,8 @@
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <title><%= I18n.t 'special.title' %> <%= controller.controller_name %> > <%= controller.action_name %></title>
-    <%= stylesheet_link_tag(session[:user] && User.find_by_id(session[:user]).style ? User.find_by_id(session[:user]).style : "default") %>
+    <%= stylesheet_link_tag "style/" + (session[:user] && User.find_by_id(session[:user]).style ? User.find_by_id(session[:user]).style : "default") %>
+    <%= stylesheet_link_tag "calendar" %>
   </head>
   <body>
     <div id='main'>

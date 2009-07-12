@@ -1,0 +1,31 @@
+#calendar {
+  border: 1px solid gray;
+  margin: 5px;
+  padding: 5px;
+  float: left;
+}
+
+div#calendar * table {
+}
+
+div#calendar * td {
+  border-left: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  text-align: center;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  border-spacing: 0;
+}
+
+.notmonth {
+  color: gray;
+}
+
+.weekend {
+  background-color: lightgray;
+}
+
+.today {
+  background-color: 0xccc;
+}
