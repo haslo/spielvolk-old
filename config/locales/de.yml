@@ -5,6 +5,9 @@ de:
     signup: Account erstellen
     profile_overview: Profil-Übersicht
     edit_profile: Profil editieren
+    event_repeating: Ereignis-Instanz
+    event: Ereignis
+    upcoming_events: Nächste Ereignisse
 
   status:
     logged_in_as: Eingeloggt als<br />{{login_link}}.

@@ -1,7 +1,9 @@
-<%= render :partial => "calendar", :locals => { :all_event_instances => @event_instances } %>
+<%= render :partial => "calendar", :locals => { :all_event_instances => @all_event_instances } %>
 
+<h2><%= I18n.t 'titles.upcoming_events' %></h2>
 <ul>
-<% @event_instances.each do |event_instance| %>
-  <li><%= render :partial => "event_link", :locals => { :event_instance => event_instance } %></li>
+<% @upcoming_event_instances.each do |event_instance| %>
+  <li><%= event_instance.date%>: <%= render :partial => "event_link", :locals => { :event_instance => event_instance } %><%= 
+  event_instance.place ? ", " + event_instance.place.title : "" %></li>
 <% end %>
 </ul>
