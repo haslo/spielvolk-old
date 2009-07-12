@@ -105,3 +105,7 @@ a:hover { color: #fff; background-color:#000; }
   font-size: smaller;
   margin-top: -10px;
 }
+
+#calendar_content {
+  display: block;
+}

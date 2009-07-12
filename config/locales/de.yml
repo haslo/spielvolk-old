@@ -32,12 +32,9 @@ de:
     email: E-Mail
     first_name: Vorname
     name: Name
-    birthdate: Geburtstag
-    salutation: Anrede
-    street: Strasse
-    street_nbr: Hausnummer
-    city: Ort
-    zip: Postleitzahl
+    title: Bezeichnung
+    description: Beschreibung
+    date: Datum
 
   buttons:
     login: Anmelden

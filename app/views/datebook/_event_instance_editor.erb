@@ -1,3 +1,9 @@
 <% form_for :event_instance do |f| %>
-event instance editor
+  <p>
+    <%= label_tag I18n.t 'labels.date' %><br />
+    <%= f.text_field "date" %>
+  </p>
+  <p>
+    <%= submit_tag I18n.t('buttons.save') %>
+  </p>
 <% end %>

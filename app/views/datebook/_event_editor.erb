@@ -1,3 +1,13 @@
-<% form_for event do |f| %>
-event editor
+<% form_for :event do |f| %>
+  <p>
+    <%= label_tag I18n.t 'labels.title' %><br />
+    <%= f.text_field "title" %>
+  </p>
+  <p>
+    <%= label_tag I18n.t 'labels.description' %><br />
+    <%= f.text_area "description" %>
+  </p>
+  <p>
+    <%= submit_tag I18n.t('buttons.save') %>
+  </p>
 <% end %>
