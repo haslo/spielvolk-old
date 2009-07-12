@@ -1,0 +1,12 @@
+<% calendar_for(all_event_instances) do |t| %>
+  <%= t.head(*get_all_weekdays) %>
+  <% t.day(:day_method => :date) do |day, event_instances| %>
+    <%= day.day %>
+    <% unless event_instances.empty? %>
+    <br />
+      <% event_instances.each do |event_instance| %>
+        <%= h(event_instance.event.title) %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
