@@ -22,8 +22,9 @@ class AdminController < ApplicationController
       flash[:notice] = I18n.t 'notices.logged_in'
       if (session[:intended_action] && session[:intended_controller])
         redirect_to :controller => session[:intended_controller],
-                    :action => session[:intended_action]
-        session[:intended_controller] = session[:intended_action] = nil
+                    :action => session[:intended_action],
+                    :id => session[:intended_id]
+        session[:intended_controller] = session[:intended_action] = session[:intended_id] = nil
         return
       end
       redirect_to :controller => "home", :action => "index"

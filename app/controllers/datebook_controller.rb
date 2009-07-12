@@ -16,6 +16,8 @@ class DatebookController < ApplicationController
 
   def edit_event_instance
     prepare_event_instance
+    @event_instance.is_exception = true
+    @event_instance.save
   end
 
   def show_event
