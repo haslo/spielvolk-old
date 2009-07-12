@@ -11,7 +11,7 @@
   <body>
     <div id='main'>
       <div id='header'>
-        <h1>spielvolk</h1>
+        <h1><%= I18n.t 'special.title' %> - <%= I18n.t 'pagetitles.' + controller.controller_name + '.' + controller.action_name %></h1>
         <div id='profile'>
           <%= session[:user] ?
             I18n.t('status.logged_in_as', :login_link => link_to(User.find_by_id(session[:user]).username, :controller => "profile", :action => "overview")) :

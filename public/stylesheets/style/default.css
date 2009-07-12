@@ -40,11 +40,11 @@ a:hover { color: #fff; background-color:#000; }
 
 
 #flashNotice {
-  width: 400px;
   border: 2px solid green;
   padding: 7px;
   padding-bottom: 12px;
   margin-bottom: 20px;
+  margin-right: 20px;
   background-color: #f0f0f0;
 }
 

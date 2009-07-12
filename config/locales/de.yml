@@ -1,7 +1,14 @@
 de:
   pagetitles:
+    admin:
+      login: Anmelden
+      signup: Account erstellen
     datebook:
       index: Kalender
+      show_event: Ereignis anzeigen
+      show_event_instance: Ereignis-Instanz anzeigen
+      edit_event: Ereignis editieren
+      edit_event_instance: Ereignis-Instanz editieren
 
   titles:
     welcome: Willkommen
