@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
     unless session[:user]
       session[:intended_action] = action_name
       session[:intended_controller] = controller_name
-    flash[:notice] = I18n.t 'errors.not_logged_in'
+      flash[:notice] = I18n.t 'errors.not_logged_in'
       redirect_to :controller => "admin", :action => "login"
     end
   end
@@ -21,7 +21,8 @@ class ApplicationController < ActionController::Base
     user = User.find(session[:user])
     unless user.roles.detect { |role|
       role.rights.detect { |right|
-        right.action == action_name && right.controller == self.class.controller_path
+          ('*' == right.actions || Regexp.new(action_name) =~ right.actions) &&
+          right.controller == self.class.controller_path
         }
       }
       flash[:notice] = I18n.t 'errors.not_authorized'

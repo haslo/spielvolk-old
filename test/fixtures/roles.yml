@@ -1,3 +1,3 @@
 admin:
   name: admin
-  rights: games_admin, events_admin
+  rights: datebook_admin

@@ -3,4 +3,14 @@
 <div id="calendar_content">
   <h2><%= I18n.t 'titles.event_repeating', :title => @event_instance.event.title %></h2>
   <p class="event_date"><%= @event_instance.date %></p>
+  <% if @event_instance.is_exception then %>
+    <p>Exception from repetition, halp.</p>
+    <%= render :partial => "event_instance_display", :locals => { :event_instance => @event_instance } %>
+    <p><%= link_to I18n.t('buttons.edit_event_instance'), :action => "edit_event_instance", :id => @event_instance.id %></p>
+  <% else %>
+    <p>Not an exception, hooray.</p>
+    <%= render :partial => "event_display", :locals => { :event => @event } %>
+    <p><%= link_to I18n.t('buttons.edit_event'), :action => "edit_event", :id => @event.id %>,
+    <%= link_to I18n.t('buttons.create_event_instance'), :action => "edit_event_instance", :id => @event_instance.id %></p>
+  <% end %>
 </div>

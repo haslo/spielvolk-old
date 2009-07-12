@@ -3,6 +3,5 @@
 <div id="calendar_content">
   <h2><%= I18n.t 'titles.event', :title => @event.title %></h2>
   <p class="event_date"><%= @event.start_date %></p>
-  <%= render :partial => "event_display", :locals => { :event => @event } %>
-  <p><%= link_to I18n.t('buttons.edit_event'), :action => "edit_event", :id => @event.id %></p>
+  <%= render :partial => "event_editor", :locals => { :event => @event, :confirm_edit => false } %>
 </div>

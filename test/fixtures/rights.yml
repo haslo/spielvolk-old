@@ -1,9 +1,9 @@
-games_admin:
-  name: Games Admin
-  controller: games
+datebook_admin:
+  name: Datebook Admin
+  controller: datebook
   actions: *
 
-events_admin:
-  name: Events Admin
-  controller: events
-  actions: *
+datebook_editor:
+  name: Datebook Editor
+  controller: datebook
+  actions: edit_event, edit_event_instance

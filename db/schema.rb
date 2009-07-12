@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090712141607) do
+ActiveRecord::Schema.define(:version => 20090712152605) do
 
   create_table "event_instances", :force => true do |t|
     t.integer  "event_id"
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(:version => 20090712141607) do
   create_table "rights", :force => true do |t|
     t.string "name"
     t.string "controller"
-    t.string "action"
+    t.string "actions"
   end
 
   create_table "rights_roles", :id => false, :force => true do |t|

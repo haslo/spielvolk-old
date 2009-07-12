@@ -36,6 +36,9 @@ de:
     save_and_next: Speichern und weiter
     save: Speichern
     step_nbr: Schritt {{step}}
+    edit_event: Ereignis editieren
+    edit_event_instance: Ereignis-Instanz editieren
+    create_event_instance: Ereignis-Instanz als Ausnahme erstellen
 
   menu:
     home: Heimseite

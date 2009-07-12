@@ -1,0 +1,13 @@
+<%= render :partial => "calendar", :locals => { :all_event_instances => @all_event_instances } %>
+
+<div id="calendar_content">
+  <h2><%= I18n.t 'titles.event_repeating', :title => @event_instance.event.title %></h2>
+  <p class="event_date"><%= @event_instance.date %></p>
+  <% if @event_instance.is_exception then %>
+    <p>Exception from repetition, halp.</p>
+    <%= render :partial => "event_instance_editor", :locals => { :event_instance => @event_instance } %>
+  <% else %>
+    <p>Not an exception, <a href="#">make it one</a>. Blerb blurb.</p>
+    <%= render :partial => "event_editor", :locals => { :event => @event, :confirm_edit => true } %>
+  <% end %>
+</div>
