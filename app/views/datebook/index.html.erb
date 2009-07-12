@@ -1,0 +1,9 @@
+<% calendar_for(@event_instances) do |t| %>
+  <%= t.head(*get_all_weekdays) %>
+  <% t.day do |day, tasks| %>
+    <%= day.day %>
+    <% tasks.each do |task| %>
+      <%= h(task.name) %>
+    <% end %>
+  <% end %>
+<% end %>
