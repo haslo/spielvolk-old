@@ -13,6 +13,10 @@ div#calendar * td {
   border-bottom: 1px solid gray;
 }
 
+div#calendar * th {
+  background-color: #eee;
+}
+
 div#calendar * td div {
   text-align: center;
   vertical-align: top;

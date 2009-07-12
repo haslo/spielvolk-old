@@ -1,4 +1,6 @@
 <%= render :partial => "calendar", :locals => { :all_event_instances => @all_event_instances } %>
 
-<h2><%= I18n.t 'titles.event', :title => @event.title %></h2>
-<p class="event_date"><%= @event.start_date %></p>
+<div id="calendar_content">
+  <h2><%= I18n.t 'titles.event', :title => @event.title %></h2>
+  <p class="event_date"><%= @event.start_date %></p>
+</div>
