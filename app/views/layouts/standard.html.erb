@@ -27,6 +27,7 @@
       <div id='menu'>
         <ul>
           <li><%= link_to I18n.t('menu.home'), :controller => "home", :action => "index" %></li>
+          <li><%= link_to I18n.t('menu.datebook'), :controller => "datebook", :action => "index" %></li>
           <% if session[:user] %>
             <li><%= link_to I18n.t('menu.logout'), :controller => "admin", :action => "logout" %></li>
           <% else %>
