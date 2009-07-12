@@ -1,1 +1,7 @@
 <%= render :partial => "calendar", :locals => { :all_event_instances => @event_instances } %>
+
+<ul>
+<% @event_instances.each do |event_instance| %>
+  <li><%= render :partial => "event_link", :locals => { :event_instance => event_instance } %></li>
+<% end %>
+</ul>
