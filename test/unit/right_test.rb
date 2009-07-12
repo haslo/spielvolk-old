@@ -4,7 +4,7 @@ class RightTest < ActiveSupport::TestCase
   def setup
     @new_right = Right.new
     @new_right.name = "new right"
-    @new_right.controller = "home"
+    @new_right.controller = "datebook"
     @new_right.actions = "index"
   end
 

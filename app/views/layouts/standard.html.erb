@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title><%= I18n.t 'special.title' %> <%= controller.controller_name %> > <%= controller.action_name %></title>
+    <title><%= I18n.t 'pagetitles.' + controller.controller_name + '.' + controller.action_name %> | <%= I18n.t 'special.title' %></title>
     <%= stylesheet_link_tag "style/" + (session[:user] && User.find_by_id(session[:user]).style ? User.find_by_id(session[:user]).style : "default") %>
     <%= stylesheet_link_tag "calendar" %>
   </head>
@@ -27,7 +27,6 @@
 
       <div id='menu'>
         <ul>
-          <li><%= link_to I18n.t('menu.home'), :controller => "home", :action => "index" %></li>
           <li><%= link_to I18n.t('menu.datebook'), :controller => "datebook", :action => "index" %></li>
           <% if session[:user] %>
             <li><%= link_to I18n.t('menu.logout'), :controller => "admin", :action => "logout" %></li>

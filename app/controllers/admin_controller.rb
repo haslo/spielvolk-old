@@ -5,7 +5,7 @@ class AdminController < ApplicationController
   def check_not_logged_in
     if session[:user]
       flash[:notice] = I18n.t 'errors.already_logged_in'
-      redirect_to :controller => "home", :action => "index"
+      redirect_to :controller => "datebook", :action => "index"
     end
   end
 
@@ -27,14 +27,14 @@ class AdminController < ApplicationController
         session[:intended_controller] = session[:intended_action] = session[:intended_id] = nil
         return
       end
-      redirect_to :controller => "home", :action => "index"
+      redirect_to :controller => "datebook", :action => "index"
     end
   end
 
   def logout
     session[:user] = nil
     flash[:notice] = I18n.t 'notices.logged_out'
-    redirect_to :controller => "home", :action => "index"
+    redirect_to :controller => "datebook", :action => "index"
   end
 
   def signup
@@ -42,7 +42,7 @@ class AdminController < ApplicationController
       @user = User.new(params[:user])
       if @user.save
         session[:user] = @user.id
-        redirect_to :controller => "home", :action => "index"
+        redirect_to :controller => "datebook", :action => "index"
         return
       end
     else

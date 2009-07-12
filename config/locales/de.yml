@@ -1,4 +1,8 @@
 de:
+  pagetitles:
+    datebook:
+      index: Kalender
+
   titles:
     welcome: Willkommen
     login: Anmelden
@@ -41,7 +45,6 @@ de:
     create_event_instance: Ereignis-Instanz als Ausnahme erstellen
 
   menu:
-    home: Heimseite
     profile: Profil
     login: Anmelden
     logout: Abmelden
@@ -49,7 +52,6 @@ de:
     datebook: Kalender
 
   paragraphs:
-    welcome: Hurra, wir haben eine Heimseite.
     signup: Bitte gib Deine Nutzerdaten ein.
     login: Bitte melde Dich an.
 
@@ -70,8 +72,8 @@ de:
     confirm_logout: Willst Du Dich wirklich abmelden?
 
   special:
-    title: spielvolk
-    footer: spielvolk von <a href='http://haslo.ch/'>haslo.ch</a>.
+    title: Spielvolk
+    footer: Spielvolk von <a href='http://haslo.ch/'>haslo.ch</a>.
 
 # German translations for Ruby on Rails 
 # by Clemens Kofler (clemens@railway.at)

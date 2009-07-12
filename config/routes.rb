@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   if RAILS_ENV == 'production' then
     map.root :controller => "under_development", :action => "index"
   else
-    map.root :controller => "home", :action => "index"
+    map.root :controller => "datebook", :action => "index"
   end
 
   map.connect ':controller/:action'
