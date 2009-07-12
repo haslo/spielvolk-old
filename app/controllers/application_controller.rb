@@ -5,9 +5,7 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password
 
   layout 'standard'
-  before_filter :check_authentication,
-                :check_authorization
-  
+  before_filter :check_authentication, :check_authorization
   before_filter :set_locale
 
   def check_authentication
@@ -26,7 +24,6 @@ class ApplicationController < ActionController::Base
         right.action == action_name && right.controller == self.class.controller_path
         }
       }
-      # TODO add a 404 redirect here
       flash[:notice] = I18n.t 'errors.not_authorized'
       request.env["HTTP_REFERER"] ? (redirect_to :back) : (redirect_to :controller => "home", :action => "index")
     end

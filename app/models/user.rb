@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :roles
   has_many :profile_associations
   has_many :profiles, :through => :profile_associations
+  has_many :events
 
   validates_uniqueness_of :username
   validates_presence_of :username
