@@ -1,4 +1,6 @@
 <% form_for :event do |f| %>
+  <%= f.error_messages %>
+
   <p>
     <%= label_tag I18n.t 'labels.title' %><br />
     <%= f.text_field "title" %>
