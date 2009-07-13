@@ -6,4 +6,9 @@ datebook_admin:
 datebook_editor:
   name: Datebook Editor
   controller: datebook
-  actions: edit_event, edit_event_instance
+  actions: create_event, edit_event, edit_event_instance
+
+datebook_power_user:
+  name: Datebook Power User
+  controller: datebook
+  actions: reset_event_instance

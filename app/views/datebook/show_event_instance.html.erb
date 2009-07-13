@@ -6,9 +6,10 @@
   <% if @event_instance.is_exception then %>
     <%= render :partial => "event_instance_display", :locals => { :event_instance => @event_instance } %>
     <p><%= link_to I18n.t('buttons.edit_event_instance'), :action => "edit_event_instance", :id => @event_instance.id %></p>
+    <p><%= button_to I18n.t('buttons.reset_event_instance'), :action => "reset_event_instance", :id => @event_instance.id %></p>
   <% else %>
     <%= render :partial => "event_display", :locals => { :event => @event } %>
-    <p><%= link_to I18n.t('buttons.edit_event'), :action => "edit_event", :id => @event.id %>,
-    <%= link_to I18n.t('buttons.create_event_instance'), :action => "edit_event_instance", :id => @event_instance.id %></p>
+    <p><%= link_to I18n.t('buttons.edit_event'), :action => "edit_event", :id => @event.id %></p>
+    <p><%= button_to I18n.t('buttons.create_event_instance'), :action => "edit_event_instance", :id => @event_instance.id %></p>
   <% end %>
 </div>

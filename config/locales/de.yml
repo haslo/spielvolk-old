@@ -55,6 +55,7 @@ de:
     edit_event: Ereignis editieren
     edit_event_instance: Ereignis-Instanz editieren
     create_event_instance: Ereignis-Instanz als Ausnahme erstellen
+    reset_event_instance: Ausnahme für die Ereignis-Instanz entfernen
 
   menu:
     profile: Profil

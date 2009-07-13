@@ -20,6 +20,14 @@ class DatebookController < ApplicationController
     @event_instance.save
   end
 
+  def reset_event_instance
+    prepare_event_instance
+    @event_instance.is_exception = false
+    # reset values to defaults, remove comments, yadda yadda
+    @event_instance.save
+    redirect_to :action => "show_event_instance", :id => @event_instance.id
+  end
+
   def show_event
     prepare_event
   end
@@ -42,7 +50,7 @@ private
   end
 
   def fetch_all_event_instances
-    @all_event_instances = fetch_event_instances Time.now - 1.month, Time.now + 1.month
+    fetch_event_instances Time.now - 1.month, Time.now + 1.month
   end
 
   def fetch_event_instances(start_date, end_date)
