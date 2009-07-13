@@ -13,20 +13,9 @@ class AdminController < ApplicationController
     if request.post?
       begin 
         if params[:username_or_email] =~ /\@/
-          user_found = User.find_all_by_email(params[:username_or_email]).detect do |user|
-            begin 
-              session[:user] = User.authenticate(user.username, params[:password]).id
-              true
-            rescue
-              false
-            end
-          end
-          if !user_found
-            raise "No fitting user found"
-          end
+          session[:user] = User.authenticate_email(params[:username_or_email], params[:password]).id
         else
-          username = params[:username_or_email]
-          session[:user] = User.authenticate(username, params[:password]).id
+          session[:user] = User.authenticate_username(params[:username_or_email], params[:password]).id
         end
       rescue
         flash[:notice] = I18n.t 'errors.wrong_password'

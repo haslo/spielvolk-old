@@ -55,10 +55,24 @@ class User < ActiveRecord::Base
     @password_confirmation = pass
   end
 
-  def self.authenticate(username, password)
+  def self.authenticate_username(username, password)
     user = User.find(:first, :conditions => ['username = ?', username])
     if user.blank? || Digest::SHA256.hexdigest(password + user.password_salt) != user.password_hash
       raise "Username or password invalid"
+    end
+    user
+  end
+
+  def self.authenticate_email(email, password)
+    user = User.find_all_by_email(email).detect do |user|
+      begin 
+        User.authenticate_username(user.username, password)
+      rescue
+        false
+      end
+    end
+    if !user
+      raise "Email or password invalid"
     end
     user
   end
