@@ -12,8 +12,22 @@ class AdminController < ApplicationController
   def login
     if request.post?
       begin 
-        username = params[:username_or_email] =~ /\@/ ? User.find_by_email(params[:username_or_email]).username : params[:username_or_email]
-        session[:user] = User.authenticate(username, params[:password]).id
+        if params[:username_or_email] =~ /\@/
+          user_found = User.find_all_by_email(params[:username_or_email]).detect do |user|
+            begin 
+              session[:user] = User.authenticate(user.username, params[:password]).id
+              true
+            rescue
+              false
+            end
+          end
+          if !user_found
+            raise "No fitting user found"
+          end
+        else
+          username = params[:username_or_email]
+          session[:user] = User.authenticate(username, params[:password]).id
+        end
       rescue
         flash[:notice] = I18n.t 'errors.wrong_password'
         redirect_to :controller => "admin", :action => "login"
