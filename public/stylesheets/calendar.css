@@ -22,8 +22,8 @@ div.datedisplay {
   text-align: left;
   vertical-align: top;
   padding: 2px;
-  width: 75px;
-  height: 60px;
+  width: 95px;
+  height: 70px;
   overflow: hidden;
   white-space: nowrap;
   font-size: smaller;
@@ -45,7 +45,10 @@ ul.calendar_eventlist li {
   margin: 0;
 }
 
-div#calendar * a.event_link {
+div#calendar span.event_time {
+  font-size: 7px;
+}
+div#calendar a.event_link {
   text-decoration: none;
 }
 

@@ -1,1 +1,4 @@
+<% if event_instance.start_time then %>
+  <span class="event_time"><%= event_instance.start_time.strftime('%H:%M') %></span>
+<% end %>
 <%= link_to event_instance.event.title, { :action => "show_event_instance", :id => event_instance.id }, :class => "event_link" %>
