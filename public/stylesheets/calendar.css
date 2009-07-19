@@ -23,7 +23,7 @@ div.datedisplay {
   vertical-align: top;
   padding: 2px;
   width: 95px;
-  height: 70px;
+  height: 75px;
   overflow: hidden;
   white-space: nowrap;
   font-size: smaller;
@@ -33,6 +33,7 @@ div.dateday {
   text-align: center;
   font-weight: bold;
   border-bottom: 1px solid #aaa;
+  margin-bottom: 2px;
 }
 
 ul.calendar_eventlist {
