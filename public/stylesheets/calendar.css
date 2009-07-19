@@ -3,6 +3,7 @@
   margin: 5px;
   padding: 5px;
   float: left;
+  margin-bottom: 30px;
 }
 
 div#calendar * table {
@@ -17,17 +18,35 @@ div#calendar * th {
   background-color: #eee;
 }
 
-div#calendar * td div {
-  text-align: center;
+div.datedisplay {
+  text-align: left;
   vertical-align: top;
   padding: 2px;
-  width: 70px;
-  height: 55px;
-  overflow: auto;
+  width: 75px;
+  height: 60px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: smaller;
+}
+
+div.dateday {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #aaa;
+}
+
+ul.calendar_eventlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul.calendar_eventlist li {
+  padding: 0;
+  margin: 0;
 }
 
 div#calendar * a.event_link {
-  font-size: smaller;
+  text-decoration: none;
 }
 
 .notmonth {
@@ -40,4 +59,8 @@ div#calendar * a.event_link {
 
 .today {
   background-color: #999;
+}
+
+div#calendar_content {
+  float: left;
 }
