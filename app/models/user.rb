@@ -71,9 +71,7 @@ class User < ActiveRecord::Base
         false
       end
     end
-    if !user
-      raise "Email or password invalid"
-    end
+    raise "Email or password invalid" unless user
     user
   end
 

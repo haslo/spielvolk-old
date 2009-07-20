@@ -2,13 +2,14 @@
 <% calendar_for(all_event_instances, :first_day_of_week => 1) do |t| %>
   <%= t.head(*get_all_weekdays) %>
   <% t.day(:day_method => :date) do |day, event_instances| %>
-    <div>
-      <%= day.day %>
+    <div class="datedisplay">
+      <div class="dateday"><%= day.day %></div>
       <% unless event_instances.empty? %>
-      <br />
+        <ul class="calendar_eventlist">
         <% event_instances.each do |event_instance| %>
-          <%= render :partial => "event_link", :locals => { :event_instance => event_instance } %>
+          <li><%= render :partial => "event_link", :locals => { :event_instance => event_instance } %></li>
         <% end %>
+        </ul>
       <% end %>
     </div>
   <% end %>

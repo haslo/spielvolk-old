@@ -27,6 +27,7 @@ de:
     event_repeating: Ereignis-Instanz {{title}}
     event: Ereignis {{title}}
     upcoming_events: Nächste Ereignisse
+    calendar: Kalender
 
   status:
     logged_in_as: Eingeloggt als<br />{{login_link}}.
